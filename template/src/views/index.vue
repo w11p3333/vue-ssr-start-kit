@@ -2,7 +2,7 @@
   <div class="container">
     <logo :src="logoSrc" />
     <word class="hello" :text="helloText" />
-    <pre>{{ pwaText }}</pre>
+    <pre>\{{ pwaText }}</pre>
   </div>
 </template>
 
