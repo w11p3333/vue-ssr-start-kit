@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  
+
   name: 'text',
 
   props: {
@@ -13,5 +13,3 @@ export default {
 
 }
 </script>
-
-
