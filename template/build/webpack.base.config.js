@@ -32,15 +32,15 @@ const baseConf = {
   module: {
     noParse: /es6-promise\.js$/, // avoid webpack shimming process
     rules: [
-      // {
-      //   test: /\.(js|vue)$/,
-      //   loader: 'eslint-loader',
-      //   enforce: "pre",
-      //   include: [resolve('src'), resolve('test')],
-      //   options: {
-      //     formatter: require('eslint-friendly-formatter')
-      //   }
-      // },
+      {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src')],
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -99,7 +99,6 @@ const baseConf = {
 }
 
 if (isProd) {
-
   if (config.build.productionGzip) {
     const CompressionWebpackPlugin = require('compression-webpack-plugin')
     baseConf.plugins.push(
@@ -121,7 +120,6 @@ if (isProd) {
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
     baseConf.plugins.push(new BundleAnalyzerPlugin())
   }
-
 }
 
 module.exports = baseConf
