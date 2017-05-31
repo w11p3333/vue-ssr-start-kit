@@ -1,0 +1,2 @@
+export const FETCH_INIT_TEXT = 'FETCH_INIT_TEXT'
+export const SET_INIT_TEXT = 'SET_INIT_TEXT'
